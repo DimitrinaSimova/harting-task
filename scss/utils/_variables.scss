@@ -1,0 +1,108 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// Font variables
+
+/// Regular font family
+/// @type List
+//$text-font-stack: 'corporates-bold', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$corporate-sregular: 'corporate-sregular';
+$corporate-sbold: 'corporate-sbold';
+$corporates-extra-bold: 'corporates-extra-bold';
+$corporate-smedium: 'corporate-smedium';
+
+
+
+/// Code (monospace) font family
+/// @type List
+//$code-font-stack: 'liberatorregular', 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+/// Copy text color
+/// @type Color
+//$text-color: #2f3033 !default;
+//$color-red: #ec1c43;
+//$color-pale-gray: #e7e7e7;
+
+/// Main brand color
+/// @type Color
+$brand-color: #2f3033 !default;
+
+/// White
+/// @type Color
+$white: #FFF !default;
+
+/// Black
+/// @type Color
+$black: #000 !default;
+
+/// Yellow
+/// @type Color
+$yellow: #fdc716 !default;
+
+/// Grey
+/// @type Color
+$grey1: #a4a4a4 !default;
+
+/// Grey
+/// @type Color
+$grey2: #a6a6a6 !default;
+
+/// Grey
+/// @type Color
+$grey3: #e5e5e5 !default;
+
+/// Grey
+/// @type Color
+$grey4: #181818 !default;
+
+/// Grey5
+/// @type Color
+$grey5: #a7a7a7 !default;
+
+/// Grey6
+/// @type Color
+$grey6: #a8a8a8 !default;
+
+/// Grey7
+/// @type Color
+$grey7: #59595c !default;
+
+/// Beige
+/// @type Color
+$beige: #f7f6f2 !default;
+
+/// Dark
+/// @type Color
+$light-black: #1a1a1a !default;
+
+/// Container's maximum width
+/// Below that is 100%
+/// @type Length
+$max-width: 1510px !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+/// @see {mixin} respond-to
+$breakpoints: (
+  'extra-small': (max-width: 320px),
+  'small': (max-width: 480px),
+  'medium': (max-width: 768px),
+  'large': (max-width: 1024px),
+  'extra-large': (max-width: 1280px)
+) !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '' !default;
+
+///   $base-url: 'http://cdn.example.com/assets/img/responsive/some_image.png';
+$images-url: $base-url + '/img/' !default;
+$fonts-url: $base-url + '/fonts/' !default;
+
+/// Nav item widths
+//$nav-width: 100%;

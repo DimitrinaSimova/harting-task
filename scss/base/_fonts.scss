@@ -1,0 +1,52 @@
+// embeded fonts
+@font-face {
+    font-family: 'corporate-sregular';
+    src: url('../fonts/corporates-regular/corporates-regular.eot');
+    src: url('../fonts/corporates-regular/corporates-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/corporates-regular/corporates-regular.woff2') format('woff2'),
+         url('../fonts/corporates-regular/corporates-regular.woff') format('woff'),
+         url('../fonts/corporates-regular/corporates-regular.ttf') format('truetype'),
+         url('../fonts/corporates-regular/corporates-regular.svg#corporate-sregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'corporate-sbold';
+    src: url('../fonts/corporates-bold/corporate_s_bold.eot');
+    src: url('../fonts/corporates-bold/corporate_s_bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/corporates-bold/corporate_s_bold.woff2') format('woff2'),
+         url('../fonts/corporates-bold/corporate_s_bold.woff') format('woff'),
+         url('../fonts/corporates-bold/corporate_s_bold.ttf') format('truetype'),
+         url('../fonts/corporates-bold/corporate_s_bold.svg#corporate-sbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'corporates-extra-bold';
+    src: url('../fonts/corporates-extra-bold/corporates-extra-bold.eot');
+    src: url('../fonts/corporates-extra-bold/corporates-extra-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/corporates-extra-bold/corporates-extra-bold.woff2') format('woff2'),
+         url('../fonts/corporates-extra-bold/corporates-extra-bold.woff') format('woff'),
+         url('../fonts/corporates-extra-bold/corporates-extra-bold.ttf') format('truetype'),
+         url('../fonts/corporates-extra-bold/corporates-extra-bold.svg#corporates-extra-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'corporate-smedium';
+    src: url('../fonts/corporates-medium/corporate_s_bq_medium.eot');
+    src: url('../fonts/corporates-medium/corporate_s_bq_medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/corporates-medium/corporate_s_bq_medium.woff2') format('woff2'),
+         url('../fonts/corporates-medium/corporate_s_bq_medium.woff') format('woff'),
+         url('../fonts/corporates-medium/corporate_s_bq_medium.ttf') format('truetype'),
+         url('../fonts/corporates-medium/corporate_s_bq_medium.svg#corporate_s_bqmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

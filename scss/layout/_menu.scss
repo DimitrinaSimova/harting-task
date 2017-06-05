@@ -1,0 +1,109 @@
+.main-nav-holder {
+
+    position: relative;
+    z-index: 100;
+
+    .main-wrapper {
+        width: 64%;
+    }
+}
+
+//================================================
+//Main navigation (Level 1)
+//================================================
+.main-list {
+    width: 64%;
+    //height: 60px;
+    padding: 20px 0;
+    text-align: center;
+
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    //@include flex-flow(row wrap);
+
+    li {
+        @include flex(1 1 auto);
+        padding: 0 2.5%;
+
+        border-right: 1px solid $grey3;
+
+        &:last-of-type {
+            border-right: none;
+        }
+
+        a {
+            text-align: center;
+            font-size: 16px;
+            font-family: $corporate-sbold;
+            white-space: nowrap;
+
+            @include on-event {
+                border-bottom: 3px solid $yellow;
+            }
+
+            @include respond-to(large) {
+                font-size: 14px;
+            }
+        }
+
+        // @include on-event {
+        //     .sub-list-nav {
+        //         display: block;
+        //     }
+        // }
+    }
+
+    .fa-home {
+        font-size: 16px;
+    }
+}
+
+
+//================================================
+//Sub navigation (Level 2)
+//================================================
+.sub-list-nav {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 300;
+    background-color: $brand-color;
+
+    .main-wrapper {
+        @include flexbox;
+        @include flex-flow(row wrap);
+        @include justify-content(space-around);
+        @include align-items(flex-start);
+    }
+
+    .column {
+        width: 20%;
+        padding: 60px 20px;
+        text-align: left;
+
+        ul {
+            padding-bottom: 30px;
+        }
+
+        ul:nth-of-type(even) {
+            padding-top: 30px;
+            border-top: 1px solid $grey7;
+        }
+    }
+
+    a {
+        line-height: 1.5;
+        color: $grey2;
+        font-size: 16px;
+        font-family: $corporate-smedium;
+    }
+
+    .category {
+        color: $white;
+        font-size: 16px;
+        font-family: $corporate-sbold;
+    }
+}

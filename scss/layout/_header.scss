@@ -1,0 +1,290 @@
+header {
+    position: relative;
+}
+
+.main-wrapper {
+    width: 80%;
+    max-width: $max-width;
+    margin: 0 auto;
+
+    //border: 1px solid red;
+}
+
+//================================================
+//META section
+//================================================
+.meta-section {
+    width: 100%;
+    //padding: 10px 0;
+    background-color: $brand-color;
+
+    .main-wrapper {
+        @include flexbox;
+        @include justify-content(space-between);
+        @include align-items(center);
+
+    }
+
+    .career-btn,
+    .change-language {
+        color: $white;
+        font-size: 11px;
+        font-family: $corporate-smedium;//CorporateS Medium
+    }
+
+    .career-btn {
+        position: relative;
+        padding: 10px 0;
+
+        &:before {
+            content: '';
+            display: block;
+
+            width: 0;
+            height: 3px;
+
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+            transition: width 0s ease, background .5s ease;
+
+            -webkit-transition: width 0s ease, background .5s ease;
+            -moz-transition: width 0s ease, background .5s ease;
+            -o-transition: width 0s ease, background .5s ease;
+            transition: width 0s ease, background .5s ease;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+
+            width: 0;
+            height: 3px;
+
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+            background-color: $yellow;
+            transition: width .5s ease;
+        }
+
+        &:hover:before {
+            width: 100%;
+            background: $yellow;
+            transition: width .5s ease;
+        }
+
+        &:hover:after {
+            width: 100%;
+            background: transparent;
+            transition: all 0s ease;
+        }
+
+        @include on-event {
+            //border-bottom: 3px solid $yellow;
+        }
+    }
+
+    .change-language-list {
+
+        position: relative;
+
+        .dropdown {
+            display: none;
+            width: 100%;
+
+            position: absolute;
+            top: 20px;
+            left: 0;
+
+            padding: 10px;
+            white-space: nowrap;
+            background: $brand-color;
+        }
+
+        li {
+            @include on-event {
+                border-bottom: none;
+                display: block;
+            }
+        }
+
+
+    }
+
+    .fa-angle-down {
+        font-size: 9px;
+    }
+}
+
+
+//================================================
+//MAIN section
+//================================================
+.main-section {
+    padding: 26px 0;
+    border-bottom: 1px solid $grey3;
+
+    .main-wrapper {
+        @include flexbox;
+        @include justify-content(space-between);
+        @include align-items(center);
+        @include flex-flow(row wrap);
+    }
+}
+
+.logo {
+    width: 20%;
+    max-width: 213px;
+    display: inline-block;
+
+    //@include flex(1 0 auto);
+    @include order(1);
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.search-form {
+    @include flex-basis(50%);
+    @include order(2);
+    max-width: 470px;
+    margin-left: 10%;
+
+    background-color: $beige;
+    border: 1px solid $grey3;
+    @include borderRadius(2px);
+
+    input[type="text"] {
+        width: 92%;
+        line-height: 1;
+        padding: 16px;
+
+        border: none;
+        outline: none;
+
+        color: $grey5;
+        background-color: transparent;
+        font-size: 11px;
+        font-family: $corporate-smedium;//CorporateS MediumItalic
+        font-style: italic;
+    }
+
+    .fa-search {
+        font-size: 20px;
+    }
+
+    @include respond-to(extra-large) {
+        @include flex-basis(40%);
+        margin-left: 0;
+    }
+
+    @include respond-to(large) {
+        @include flex-basis(100%);
+        @include order(4);
+        max-width: 100%;
+    }
+}
+
+//================================================
+//Account section
+//================================================
+.account-section {
+    @include flexbox;
+    @include order(3);
+    @include flex-basis(24%);
+    @include justify-content(flex-end);
+    @include align-items(center);
+
+    text-align: center;
+}
+
+.rating,
+.basket,
+.account {
+    @include flex(1 0 auto);
+}
+
+.counter {
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    display: inline-block;
+
+    vertical-align: top;
+
+    margin-top: -3px;
+    margin-left: -15px;
+
+    color: $grey5;
+    font-size: 11px;
+    font-family: $corporate-smedium;
+    background-color: $beige;
+    @include borderRadius(50%);
+
+    &.active {
+        color: $light-black;
+        background-color: $yellow;
+    }
+}
+
+.rating,
+.basket {
+    //@include flex(1 1 auto);
+    position: relative;
+
+    font-size: 30px;
+    border-right: 1px solid $grey3;
+}
+
+.account {
+    //@include flex(2 2 auto);
+
+    a {
+        position: relative;
+        margin: 14px;
+        text-align: left;
+    }
+
+    .fa-angle-down {
+        width: 30px;
+        height: 30px;
+        //display: inline-block;
+
+        position: absolute;
+        top: -13px;
+        right: -40px;
+
+        line-height: 30px;
+        font-size: 12px;
+        text-align: center;
+        background-color: $beige;
+        @include borderRadius(50%);
+    }
+}
+
+.account-wrapper {
+    display: inline-block;
+    line-height: 1.7;
+}
+
+.account-name-txt {
+    display: block;
+
+    color: $grey6;
+    font-size: 11px;
+    font-style: italic;
+    font-family: $corporate-smedium;
+}
+
+.account-nav {
+    display: block;
+
+    font-size: 16px;
+    font-family: $corporate-sbold;
+}
+
