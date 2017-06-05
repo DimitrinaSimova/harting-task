@@ -539,16 +539,6 @@ body {
       display: inline-block;
       vertical-align: middle;
       fill: currentColor; }
-  @media screen and (max-width: 768px) {
-    .main-nav-holder {
-      position: absolute;
-      top: 0;
-      left: 0; }
-      .main-nav-holder .burger-menu {
-        display: block; }
-      .main-nav-holder .main-nav {
-        width: 100%;
-        background-color: #FFF; } }
 
 .main-list-nav {
   width: 64%;
@@ -594,15 +584,9 @@ body {
         .main-list-nav li a {
           font-size: 14px; } }
   .main-list-nav .fa-home {
-    font-size: 16px; }
+    font-size: 18px; }
   .main-list-nav .burger-menu {
     display: none; }
-  @media screen and (max-width: 768px) {
-    .main-list-nav {
-      width: 100%;
-      display: block;
-      padding: 15px 0;
-      background-color: #FFF; } }
 
 .sub-list-nav {
   display: none;
@@ -610,7 +594,7 @@ body {
   position: absolute;
   top: 60px;
   left: 0;
-  z-index: 300;
+  z-index: 600;
   background-color: #2f3033; }
   .sub-list-nav .main-wrapper {
     display: -webkit-box;
@@ -780,7 +764,7 @@ header {
     flex-flow: row wrap; }
 
 .logo {
-  width: 20%;
+  width: 100%;
   max-width: 213px;
   display: inline-block;
   -webkit-box-ordinal-group: 2;
@@ -803,31 +787,35 @@ header {
   -ms-flex-order: 2;
   order: 2;
   max-width: 470px;
-  margin-left: 10%;
-  background-color: #f7f6f2;
-  border: 1px solid #e5e5e5;
-  -webkit-border-radius: 2px;
-  -ms-border-radius: 2px;
-  border-radius: 2px; }
-  .search-form-container .search-form input[type="text"] {
-    width: 92%;
-    line-height: 1;
-    padding: 16px;
-    border: none;
-    outline: none;
-    color: #a7a7a7;
-    background-color: transparent;
-    font-size: 11px;
-    font-family: "corporate-smedium";
-    font-style: italic; }
+  margin-left: 10%; }
+  .search-form-container .search-form {
+    background-color: #f7f6f2;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px; }
+    .search-form-container .search-form input[type="text"] {
+      width: 92%;
+      line-height: 1;
+      padding: 16px;
+      border: none;
+      outline: none;
+      color: #a7a7a7;
+      background-color: transparent;
+      font-size: 11px;
+      font-family: "corporate-smedium";
+      font-style: italic; }
+    @media screen and (max-width: 1024px) {
+      .search-form-container .search-form {
+        margin-top: 10px; } }
   .search-form-container .fa-search {
     font-size: 20px; }
   @media screen and (max-width: 1280px) {
     .search-form-container {
-      -webkit-flex-basis: 40%;
-      -moz-flex-basis: 40%;
-      -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+      -webkit-flex-basis: 35%;
+      -moz-flex-basis: 35%;
+      -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
       margin-left: 0; } }
   @media screen and (max-width: 1024px) {
     .search-form-container {
@@ -854,7 +842,7 @@ header {
   -moz-flex-basis: 24%;
   -ms-flex-preferred-size: 24%;
   flex-basis: 24%; }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1280px) {
     .account-section {
       -webkit-flex-basis: 34%;
       -moz-flex-basis: 34%;
@@ -887,8 +875,7 @@ header {
   -moz-box-flex: 1;
   -moz-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  padding: 0 10px; }
+  flex: 1 0 auto; }
 
 .counter {
   width: 15px;
@@ -935,15 +922,12 @@ header {
   -ms-flex-item-align: center;
   align-self: center;
   line-height: 30px;
-  font-size: 12px;
+  font-size: 20px;
   text-align: center;
   background-color: #f7f6f2;
   -webkit-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%; }
-@media screen and (max-width: 768px) {
-  .account {
-    display: none; } }
 
 .account-wrapper {
   display: inline-block;
@@ -1029,17 +1013,23 @@ header {
     color: #fdc716;
     font-size: 44px;
     font-size: 2.3vw; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       .hpp-slider-section .slider-headline {
         font-size: 3.3vw; } }
+    @media screen and (max-width: 480px) {
+      .hpp-slider-section .slider-headline {
+        font-size: 4.3vw; } }
   .hpp-slider-section .description {
     margin: 20px 0 30px;
     line-height: 1.4;
     font-size: 24px;
     font-size: 1.4vw; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       .hpp-slider-section .description {
         font-size: 2.4vw; } }
+    @media screen and (max-width: 480px) {
+      .hpp-slider-section .description {
+        font-size: 3.4vw; } }
   .hpp-slider-section .learn-more {
     display: inline-block;
     padding: 20px 33px;
@@ -1050,6 +1040,9 @@ header {
     -webkit-border-radius: 3px;
     -ms-border-radius: 3px;
     border-radius: 3px; }
+    @media screen and (max-width: 480px) {
+      .hpp-slider-section .learn-more {
+        padding: 10px 15px; } }
   .hpp-slider-section .slick-dots {
     width: 5%;
     display: -webkit-box;

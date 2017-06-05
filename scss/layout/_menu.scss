@@ -93,20 +93,20 @@
         }
     }
 
-    @include respond-to(medium) {
-        position: absolute;
-        top: 0;
-        left: 0;
+    // @include respond-to(medium) {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
 
-        .burger-menu {
-            display: block;
-        }
+    //     .burger-menu {
+    //         display: block;
+    //     }
 
-        .main-nav {
-            width: 100%;
-            background-color: $white;
-        }
-    }
+    //     .main-nav {
+    //         width: 100%;
+    //         background-color: $white;
+    //     }
+    // }
 }
 
 //================================================
@@ -157,20 +157,20 @@
     }
 
     .fa-home {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .burger-menu {
         display: none;
     }
 
-    @include respond-to(medium) {
-        width: 100%;
-        display: block;
+    // @include respond-to(medium) {
+    //     width: 100%;
+    //     display: block;
 
-        padding: 15px 0;
-        background-color: $white;
-    }
+    //     padding: 15px 0;
+    //     background-color: $white;
+    // }
 }
 
 
@@ -183,7 +183,7 @@
     position: absolute;
     top: 60px;
     left: 0;
-    z-index: 300;
+    z-index: 600;
     background-color: $brand-color;
 
     .main-wrapper {
