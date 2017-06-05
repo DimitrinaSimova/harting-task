@@ -93,14 +93,14 @@ header {
 
     .career-btn {
         position: relative;
-        padding: 10px 0;
+        //padding: 10px 0;
 
         @extend .link-hover-effect;
 
         &:before,
         &:after {
             content: '';
-            bottom: 0;
+            bottom: -12px;
         }
     }
 

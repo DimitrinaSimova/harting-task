@@ -727,11 +727,10 @@ header {
     font-size: 11px;
     font-family: "corporate-smedium"; }
   .meta-section .career-btn {
-    position: relative;
-    padding: 10px 0; }
+    position: relative; }
     .meta-section .career-btn:before, .meta-section .career-btn:after {
       content: '';
-      bottom: 0; }
+      bottom: -12px; }
   .meta-section .change-language-list {
     position: relative; }
     .meta-section .change-language-list .dropdown {
