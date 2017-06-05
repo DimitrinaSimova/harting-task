@@ -32,6 +32,13 @@
                                     <span>French (FR)</span>
                                 </a>
                             </li>
+
+                            <li>
+                                <a href="javascript:;" class="change-language" title="Change the language">
+                                    <img src="img/flag-uk.png" alt="French (FR)">
+                                    <span>Bulgarian (BG)</span>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -46,13 +53,15 @@
                     <img src="img/logo.png" title="Harting - Pushing Performance">
                 </a>
 
-                <form method="POST" action="#" id="search" class="search-form">
-                    <input type="text" name="txtsearch" placeholder="Type here to search products and topics">
+                <div class="search-form-container">
+                    <form method="POST" action="#" id="search" class="search-form">
+                        <input type="text" name="txtsearch" placeholder="Type here to search products and topics">
 
-                    <a href="javascript:;" title="Search in the site">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                    </a>
-                </form>
+                        <a href="javascript:;" title="Search in the site">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
+                    </form>
+                </div>
 
                 <div class="account-section">
                     <div class="rating">
@@ -79,11 +88,22 @@
 
         <section class="main-nav-holder">
             <nav class="main-nav">
-                <ul class="main-list main-wrapper">
+                <!-- <a href="javascript:;" class="burger-menu">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </a> -->
+
+                <div class="burgur-menu">
+                    <button class="hamburger hamburger-cancel">
+                      <span class="icon"></span>
+                    </button>
+                </div>
+
+                <ul class="main-list-nav main-wrapper">
                     <li>
                         <a href="javascript:;">
                         <i class="fa fa-home" aria-hidden="true"></i></a>
                     </li>
+
                     <li>
                         <a href="javascript:;" data-link="products">Products</a>
                     </li>
@@ -244,59 +264,68 @@
         </section>
     </header>
 
-    <section class="slider">
+    <section class="hpp-slider-section">
         <div class="slider-item">
-            <div class="image-container">
-                <img src="img/harg-web-corp-main-xl-v02-nk-pr.png" alt="">
-            </div>
+            <div class="image-container thumb1"></div>
 
-            <div class="main-wrapper">
-                <div class="inner-container">
-                    <p class="slider-headline">HARTING pushing industry 4.0 to the next level</p>
+            <div class="inner-container">
+                <p class="slider-headline">HARTING pushing industry 4.0 to the next level</p>
 
-                    <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+                <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
 
-                    <a href="javascript:;" class="learn-more" title="Learn more">Learn more</a>
-                </div>
+                <a href="javascript:;" class="learn-more" title="Learn more">Learn more</a>
             </div>
         </div>
 
         <div class="slider-item">
-            <div class="image-container">
-                <img src="http://bsbvision.com/wp-content/uploads/2016/01/btr_mariana_skala_01-1280x720.jpg" alt="">
-            </div>
+            <div class="image-container thumb2"></div>
 
-            <div class="main-wrapper">
-                <div class="inner-container">
-                    <p class="slider-headline">HARTING pushing industry 4.0 to the next level</p>
+            <div class="inner-container">
+                <p class="slider-headline">HARTING pushing industry 4.0 to the next level</p>
 
-                    <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+                <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
 
-                    <a href="javascript:;" class="learn-more" title="Learn more">Learn more</a>
-                </div>
+                <a href="javascript:;" class="learn-more" title="Learn more">Learn more</a>
             </div>
         </div>
 
         <div class="slider-item">
-            <div class="image-container">
-                <img src="img/harg-web-corp-main-xl-v02-nk-pr.png" alt="">
-            </div>
+            <div class="image-container thumb3"></div>
 
-            <div class="main-wrapper">
-                <div class="inner-container">
-                    <p class="slider-headline">HARTING pushing industry 4.0 to the next level</p>
+            <div class="inner-container">
+                <p class="slider-headline">HARTING pushing industry 4.0 to the next level</p>
 
-                    <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+                <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
 
-                    <a href="javascript:;" class="learn-more" title="Learn more">Learn more</a>
-                </div>
+                <a href="javascript:;" class="learn-more" title="Learn more">Learn more</a>
             </div>
         </div>
 
+        <div class="slider-item">
+            <div class="image-container thumb4"></div>
+
+            <div class="inner-container">
+                <p class="slider-headline">HARTING pushing industry 4.0 to the next level</p>
+
+                <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+
+                <a href="javascript:;" class="learn-more" title="Learn more">Learn more</a>
+            </div>
+        </div>
+
+        <div class="slider-item">
+            <div class="image-container thumb5"></div>
+
+            <div class="inner-container">
+                <p class="slider-headline">HARTING pushing industry 4.0 to the next level</p>
+
+                <p class="description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+
+                <a href="javascript:;" class="learn-more" title="Learn more">Learn more</a>
+            </div>
+        </div>
     </section>
 
-    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
     <script src="js/lib/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/lib/slick/slick.min.js"></script>
     <script src="js/scripts.js"></script>

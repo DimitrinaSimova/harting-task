@@ -6,8 +6,67 @@ header {
     width: 80%;
     max-width: $max-width;
     margin: 0 auto;
+}
 
-    //border: 1px solid red;
+.link-hover-effect {
+    &:before {
+        content: '';
+        display: block;
+
+        width: 0;
+        height: 3px;
+
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+
+        -webkit-transition: width 0s ease, background .5s ease;
+        -moz-transition: width 0s ease, background .5s ease;
+        -o-transition: width 0s ease, background .5s ease;
+        transition: width 0s ease, background .5s ease;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+
+        width: 0;
+        height: 3px;
+
+        position: absolute;
+        right: 0;
+        bottom: -20px;
+
+        background-color: $yellow;
+        transition: width .5s ease;
+
+        -webkit-transition: width .5s ease;
+        -moz-transition: width .5s ease;
+        -o-transition: width .5s ease;
+        transition: width .5s ease;
+    }
+
+    &:hover:before {
+        width: 100%;
+        background: $yellow;
+        transition: width .5s ease;
+
+        -webkit-transition: width .5s ease;
+        -moz-transition: width .5s ease;
+        -o-transition: width .5s ease;
+        transition: width .5s ease;
+    }
+
+    &:hover:after {
+        width: 100%;
+        background: transparent;
+        transition: all 0s ease;
+
+        -webkit-transition: all 0s ease;
+        -moz-transition: all 0s ease;
+        -o-transition: all 0s ease;
+        transition: all 0s ease;
+    }
 }
 
 //================================================
@@ -15,7 +74,7 @@ header {
 //================================================
 .meta-section {
     width: 100%;
-    //padding: 10px 0;
+    padding: 10px 0;
     background-color: $brand-color;
 
     .main-wrapper {
@@ -36,54 +95,12 @@ header {
         position: relative;
         padding: 10px 0;
 
-        &:before {
-            content: '';
-            display: block;
+        @extend .link-hover-effect;
 
-            width: 0;
-            height: 3px;
-
-            position: absolute;
-            left: 0;
-            bottom: 0;
-
-            transition: width 0s ease, background .5s ease;
-
-            -webkit-transition: width 0s ease, background .5s ease;
-            -moz-transition: width 0s ease, background .5s ease;
-            -o-transition: width 0s ease, background .5s ease;
-            transition: width 0s ease, background .5s ease;
-        }
-
+        &:before,
         &:after {
             content: '';
-            display: block;
-
-            width: 0;
-            height: 3px;
-
-            position: absolute;
-            right: 0;
             bottom: 0;
-
-            background-color: $yellow;
-            transition: width .5s ease;
-        }
-
-        &:hover:before {
-            width: 100%;
-            background: $yellow;
-            transition: width .5s ease;
-        }
-
-        &:hover:after {
-            width: 100%;
-            background: transparent;
-            transition: all 0s ease;
-        }
-
-        @include on-event {
-            //border-bottom: 3px solid $yellow;
         }
     }
 
@@ -94,28 +111,40 @@ header {
         .dropdown {
             display: none;
             width: 100%;
+            min-width: 100px;
 
             position: absolute;
-            top: 20px;
-            left: 0;
+            top: 19px;
+            left: -5px;
 
-            padding: 10px;
             white-space: nowrap;
-            background: $brand-color;
+            background-color: $brand-color;
+
+            a {
+                display: inline-block;
+                padding: 0 5px;
+
+                @include on-event {
+                    color: $grey5;
+                }
+            }
         }
 
         li {
             @include on-event {
-                border-bottom: none;
-                display: block;
+                .dropdown {
+                    display: block;
+                }
             }
         }
-
-
     }
 
     .fa-angle-down {
         font-size: 9px;
+    }
+
+    @include respond-to(medium) {
+        display: none;
     }
 }
 
@@ -149,7 +178,8 @@ header {
     }
 }
 
-.search-form {
+.search-form-container {
+
     @include flex-basis(50%);
     @include order(2);
     max-width: 470px;
@@ -159,19 +189,22 @@ header {
     border: 1px solid $grey3;
     @include borderRadius(2px);
 
-    input[type="text"] {
-        width: 92%;
-        line-height: 1;
-        padding: 16px;
 
-        border: none;
-        outline: none;
+    .search-form {
+        input[type="text"] {
+            width: 92%;
+            line-height: 1;
+            padding: 16px;
 
-        color: $grey5;
-        background-color: transparent;
-        font-size: 11px;
-        font-family: $corporate-smedium;//CorporateS MediumItalic
-        font-style: italic;
+            border: none;
+            outline: none;
+
+            color: $grey5;
+            background-color: transparent;
+            font-size: 11px;
+            font-family: $corporate-smedium;//CorporateS MediumItalic
+            font-style: italic;
+        }
     }
 
     .fa-search {
@@ -187,6 +220,8 @@ header {
         @include flex-basis(100%);
         @include order(4);
         max-width: 100%;
+        margin-top: 10px;
+        border-top: 1px solid $grey3;
     }
 }
 
@@ -201,6 +236,10 @@ header {
     @include align-items(center);
 
     text-align: center;
+
+    @include respond-to(large) {
+        @include flex-basis(34%);
+    }
 }
 
 .rating,
@@ -242,7 +281,6 @@ header {
 }
 
 .account {
-    //@include flex(2 2 auto);
 
     a {
         position: relative;
@@ -264,6 +302,10 @@ header {
         text-align: center;
         background-color: $beige;
         @include borderRadius(50%);
+    }
+
+    @include respond-to(medium) {
+        display: none;
     }
 }
 

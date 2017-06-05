@@ -6,12 +6,113 @@
     .main-wrapper {
         width: 64%;
     }
+
+    .burgur-menu {
+        display: none;
+        width: 20px;
+        height: 20px;
+
+        position: absolute;
+        top: 20px;
+        //top: 5px;
+        left: 20px;
+        z-index: 10;
+
+        .hamburger {
+            font-size: 20px;
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            padding: 0;
+            cursor: pointer;
+            vertical-align: middle;
+            border: 0 none;
+            outline: 0;
+            background-color: transparent;
+            //.transition(transform 0.3s ease-in-out);
+
+            -webkit-transition: transform 0.3s ease-in-out;
+            -moz-transition: transform 0.3s ease-in-out;
+            -o-transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out;
+
+            &::before,
+            &::after {
+                content: '';
+            }
+
+            &::before,
+            &::after,
+            & .icon {
+                display: block;
+                width: 100%;
+                height: .2em;
+                margin: 0 0 .2em;
+                //.transition(transform 0.3s ease-in-out);
+                border-radius: .05em;
+                background: $brand-color;
+
+                -webkit-transition: transform 0.3s ease-in-out;
+                -moz-transition: transform 0.3s ease-in-out;
+                -o-transition: transform 0.3s ease-in-out;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            &.active,
+            &.active:focus,
+            &:focus{
+              outline: 0;
+            }
+
+            &.active .icon,
+            &.active::before,
+            &.active::after {
+              background: $brand-color;
+            }
+
+            //Style Cancel
+            &.hamburger-cancel.active:before {
+              transform: translateY(.4em) rotate(135deg);
+            }
+
+            &.hamburger-cancel.active:after{
+              transform: translateY(-.4em) rotate(-135deg);
+            }
+
+            &.hamburger-cancel.active .icon {
+              transform: scale(0);
+            }
+        }
+
+        .icon {
+          height: 1em;
+          width: 1em;
+          display: inline-block;
+          vertical-align: middle;
+          fill: currentColor;
+        }
+    }
+
+    @include respond-to(medium) {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .burger-menu {
+            display: block;
+        }
+
+        .main-nav {
+            width: 100%;
+            background-color: $white;
+        }
+    }
 }
 
 //================================================
 //Main navigation (Level 1)
 //================================================
-.main-list {
+.main-list-nav {
     width: 64%;
     //height: 60px;
     padding: 20px 0;
@@ -23,7 +124,7 @@
     //@include flex-flow(row wrap);
 
     li {
-        @include flex(1 1 auto);
+        @include flex(1 0 auto);
         padding: 0 2.5%;
 
         border-right: 1px solid $grey3;
@@ -32,30 +133,43 @@
             border-right: none;
         }
 
+        &:first-of-type {
+            @include respond-to(medium) {
+                display: none;
+            }
+        }
+
         a {
+            position: relative;
+            display: inline-block;
+            //padding-bottom: 20px;
             text-align: center;
             font-size: 16px;
             font-family: $corporate-sbold;
             white-space: nowrap;
 
-            @include on-event {
-                border-bottom: 3px solid $yellow;
-            }
+            @extend .link-hover-effect;
 
             @include respond-to(large) {
                 font-size: 14px;
             }
         }
-
-        // @include on-event {
-        //     .sub-list-nav {
-        //         display: block;
-        //     }
-        // }
     }
 
     .fa-home {
         font-size: 16px;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    @include respond-to(medium) {
+        width: 100%;
+        display: block;
+
+        padding: 15px 0;
+        background-color: $white;
     }
 }
 

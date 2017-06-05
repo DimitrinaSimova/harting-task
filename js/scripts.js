@@ -27,7 +27,7 @@
 
 $(document).ready(function() {
 
-    $('.slider').slick({
+    $('.hpp-slider-section').slick({
         infinite: true,
         arrows: false,
         dots: true,

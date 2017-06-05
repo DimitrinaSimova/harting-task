@@ -29,6 +29,7 @@ html {
 a {
     color: $brand-color;
     text-decoration: none;
+    outline: none;
 
     @include on-event {
         //color: $text-color;
