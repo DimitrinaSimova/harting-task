@@ -250,6 +250,7 @@ header {
 .basket,
 .account {
     @include flex(1 0 auto);
+    padding: 0 10px;
 }
 
 .counter {
@@ -282,10 +283,6 @@ header {
 
     font-size: 30px;
     border-right: 1px solid $grey3;
-}
-
-.rating {
-    padding: 0 10px;
 }
 
 .account {

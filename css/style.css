@@ -887,7 +887,8 @@ header {
   -moz-box-flex: 1;
   -moz-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
-  flex: 1 0 auto; }
+  flex: 1 0 auto;
+  padding: 0 10px; }
 
 .counter {
   width: 15px;
@@ -913,9 +914,6 @@ header {
   position: relative;
   font-size: 30px;
   border-right: 1px solid #e5e5e5; }
-
-.rating {
-  padding: 0 10px; }
 
 .account a {
   display: -webkit-box;
