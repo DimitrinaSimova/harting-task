@@ -756,7 +756,7 @@ header {
       display: none; } }
 
 .main-section {
-  padding: 26px 0;
+  padding: 28px 0;
   border-bottom: 1px solid #e5e5e5; }
   .main-section .main-wrapper {
     display: -webkit-box;
@@ -845,11 +845,6 @@ header {
       border-top: 1px solid #e5e5e5; } }
 
 .account-section {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-ordinal-group: 4;
   -webkit-order: 3;
   -moz-order: 3;
@@ -858,7 +853,20 @@ header {
   -webkit-flex-basis: 24%;
   -moz-flex-basis: 24%;
   -ms-flex-preferred-size: 24%;
-  flex-basis: 24%;
+  flex-basis: 24%; }
+  @media screen and (max-width: 1024px) {
+    .account-section {
+      -webkit-flex-basis: 34%;
+      -moz-flex-basis: 34%;
+      -ms-flex-preferred-size: 34%;
+      flex-basis: 34%; } }
+
+.account-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   -webkit-justify-content: flex-end;
@@ -870,12 +878,6 @@ header {
   -moz-align-items: center;
   align-items: center;
   text-align: center; }
-  @media screen and (max-width: 1024px) {
-    .account-section {
-      -webkit-flex-basis: 34%;
-      -moz-flex-basis: 34%;
-      -ms-flex-preferred-size: 34%;
-      flex-basis: 34%; } }
 
 .rating,
 .basket,
@@ -912,16 +914,28 @@ header {
   font-size: 30px;
   border-right: 1px solid #e5e5e5; }
 
+.rating {
+  padding: 0 10px; }
+
 .account a {
-  position: relative;
-  margin: 14px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  justify-content: flex-end;
   text-align: left; }
 .account .fa-angle-down {
   width: 30px;
   height: 30px;
-  position: absolute;
-  top: -13px;
-  right: -40px;
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
   line-height: 30px;
   font-size: 12px;
   text-align: center;
@@ -935,7 +949,8 @@ header {
 
 .account-wrapper {
   display: inline-block;
-  line-height: 1.7; }
+  line-height: 1.7;
+  padding-right: 10px; }
 
 .account-name-txt {
   display: block;

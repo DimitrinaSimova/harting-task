@@ -153,7 +153,7 @@ header {
 //MAIN section
 //================================================
 .main-section {
-    padding: 26px 0;
+    padding: 28px 0;
     border-bottom: 1px solid $grey3;
 
     .main-wrapper {
@@ -229,17 +229,21 @@ header {
 //Account section
 //================================================
 .account-section {
-    @include flexbox;
+
     @include order(3);
     @include flex-basis(24%);
-    @include justify-content(flex-end);
-    @include align-items(center);
-
-    text-align: center;
 
     @include respond-to(large) {
         @include flex-basis(34%);
     }
+}
+
+.account-wrap {
+    @include flexbox;
+    @include justify-content(flex-end);
+    @include align-items(center);
+
+    text-align: center;
 }
 
 .rating,
@@ -273,29 +277,30 @@ header {
 
 .rating,
 .basket {
-    //@include flex(1 1 auto);
     position: relative;
+    //padding: 0 20px;
 
     font-size: 30px;
     border-right: 1px solid $grey3;
 }
 
+.rating {
+    padding: 0 10px;
+}
+
 .account {
 
     a {
-        position: relative;
-        margin: 14px;
+        @include flexbox;
+        @include justify-content(flex-end);
+        //padding: 14px;
         text-align: left;
     }
 
     .fa-angle-down {
         width: 30px;
         height: 30px;
-        //display: inline-block;
-
-        position: absolute;
-        top: -13px;
-        right: -40px;
+        @include align-self(center);
 
         line-height: 30px;
         font-size: 12px;
@@ -312,6 +317,7 @@ header {
 .account-wrapper {
     display: inline-block;
     line-height: 1.7;
+    padding-right: 10px;
 }
 
 .account-name-txt {
