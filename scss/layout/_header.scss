@@ -301,13 +301,13 @@ header {
         text-align: left;
     }
 
-    .fa-angle-down {
+    .fa-chevron-down {
         width: 30px;
         height: 30px;
         @include align-self(center);
 
         line-height: 30px;
-        font-size: 20px;
+        font-size: 12px;
         text-align: center;
         background-color: $beige;
         @include borderRadius(50%);

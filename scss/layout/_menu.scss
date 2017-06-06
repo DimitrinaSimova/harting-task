@@ -104,7 +104,8 @@
     }
 
     & .column {
-        width: 20%;
+        //width: 20%;
+        @include flex(1 1 20%);
         padding: 60px 20px;
         text-align: left;
 
@@ -121,6 +122,9 @@
             border-right: none;
 
             & > a {
+                display: inline-block;
+                padding-left: 24px;
+
                 line-height: 1.5;
                 color: $grey2;
                 font-size: 16px;
@@ -128,10 +132,56 @@
             }
 
             & .category {
+                padding-left: 0;
                 color: $white;
                 font-size: 16px;
                 font-family: $corporate-sbold;
             }
         }
     }
+}
+
+.icon-cables {
+    width: 21px;
+    height: 12px;
+}
+
+.icon-connectors {
+    width: 23px;
+    height: 10px;
+}
+
+.icon-IOconnector {
+    width: 21px;
+    height: 9px;
+}
+
+.icon-switches {
+    width: 24px;
+    height: 11px;
+}
+
+.icon-drive-systems {
+    width: 22px;
+    height: 10px;
+}
+
+.icon-rfid {
+    width: 24px;
+    height: 10px;
+}
+
+.icon-tools {
+    width: 23px;
+    height: 6px;
+}
+
+.icon-pc-board {
+    width: 24px;
+    height: 9px;
+}
+
+.icon-power-measurement {
+    width: 23px;
+    height: 10px;
 }

@@ -561,7 +561,12 @@ body {
     -moz-align-items: flex-start;
     align-items: flex-start; }
   .sub-list-nav .column {
-    width: 20%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 20%;
+    -moz-box-flex: 1;
+    -moz-flex: 1 1 20%;
+    -ms-flex: 1 1 20%;
+    flex: 1 1 20%;
     padding: 60px 20px;
     text-align: left; }
     .sub-list-nav .column ul {
@@ -572,14 +577,53 @@ body {
     .sub-list-nav .column li.nav-level2 {
       border-right: none; }
       .sub-list-nav .column li.nav-level2 > a {
+        display: inline-block;
+        padding-left: 24px;
         line-height: 1.5;
         color: #a6a6a6;
         font-size: 16px;
         font-family: "corporate-smedium"; }
       .sub-list-nav .column li.nav-level2 .category {
+        padding-left: 0;
         color: #FFF;
         font-size: 16px;
         font-family: "corporate-sbold"; }
+
+.icon-cables {
+  width: 21px;
+  height: 12px; }
+
+.icon-connectors {
+  width: 23px;
+  height: 10px; }
+
+.icon-IOconnector {
+  width: 21px;
+  height: 9px; }
+
+.icon-switches {
+  width: 24px;
+  height: 11px; }
+
+.icon-drive-systems {
+  width: 22px;
+  height: 10px; }
+
+.icon-rfid {
+  width: 24px;
+  height: 10px; }
+
+.icon-tools {
+  width: 23px;
+  height: 6px; }
+
+.icon-pc-board {
+  width: 24px;
+  height: 9px; }
+
+.icon-power-measurement {
+  width: 23px;
+  height: 10px; }
 
 header {
   position: relative; }
@@ -867,7 +911,7 @@ header {
   -moz-justify-content: flex-end;
   justify-content: flex-end;
   text-align: left; }
-.account .fa-angle-down {
+.account .fa-chevron-down {
   width: 30px;
   height: 30px;
   -webkit-align-self: center;
@@ -875,7 +919,7 @@ header {
   -ms-flex-item-align: center;
   align-self: center;
   line-height: 30px;
-  font-size: 20px;
+  font-size: 12px;
   text-align: center;
   background-color: #f7f6f2;
   -webkit-border-radius: 50%;
