@@ -123,7 +123,7 @@
 
             & > a {
                 display: inline-block;
-                padding-left: 24px;
+                padding-left: 33px;
 
                 line-height: 1.5;
                 color: $grey2;
@@ -132,6 +132,9 @@
             }
 
             & .category {
+                @include flexbox;
+                @include align-items(baseline);
+
                 padding-left: 0;
                 color: $white;
                 font-size: 16px;
@@ -139,6 +142,10 @@
             }
         }
     }
+}
+
+img[class^='icon-'] {
+    margin-right: 10px;
 }
 
 .icon-cables {

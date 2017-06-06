@@ -578,16 +578,29 @@ body {
       border-right: none; }
       .sub-list-nav .column li.nav-level2 > a {
         display: inline-block;
-        padding-left: 24px;
+        padding-left: 33px;
         line-height: 1.5;
         color: #a6a6a6;
         font-size: 16px;
         font-family: "corporate-smedium"; }
       .sub-list-nav .column li.nav-level2 .category {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+        -webkit-align-items: baseline;
+        -moz-align-items: baseline;
+        align-items: baseline;
         padding-left: 0;
         color: #FFF;
         font-size: 16px;
         font-family: "corporate-sbold"; }
+
+img[class^='icon-'] {
+  margin-right: 10px; }
 
 .icon-cables {
   width: 21px;
