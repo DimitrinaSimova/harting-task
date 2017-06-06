@@ -1,97 +1,11 @@
-.main-nav-holder {
+.main-nav-section {
 
     position: relative;
-    z-index: 100;
+    z-index: 400;
 
-    .main-wrapper {
-        width: 64%;
-    }
-
-    .burgur-menu {
-        display: none;
-        width: 20px;
-        height: 20px;
-
-        position: absolute;
-        top: 20px;
-        //top: 5px;
-        left: 20px;
-        z-index: 10;
-
-        .hamburger {
-            font-size: 20px;
-            display: inline-block;
-            width: 1em;
-            height: 1em;
-            padding: 0;
-            cursor: pointer;
-            vertical-align: middle;
-            border: 0 none;
-            outline: 0;
-            background-color: transparent;
-            //.transition(transform 0.3s ease-in-out);
-
-            -webkit-transition: transform 0.3s ease-in-out;
-            -moz-transition: transform 0.3s ease-in-out;
-            -o-transition: transform 0.3s ease-in-out;
-            transition: transform 0.3s ease-in-out;
-
-            &::before,
-            &::after {
-                content: '';
-            }
-
-            &::before,
-            &::after,
-            & .icon {
-                display: block;
-                width: 100%;
-                height: .2em;
-                margin: 0 0 .2em;
-                //.transition(transform 0.3s ease-in-out);
-                border-radius: .05em;
-                background: $brand-color;
-
-                -webkit-transition: transform 0.3s ease-in-out;
-                -moz-transition: transform 0.3s ease-in-out;
-                -o-transition: transform 0.3s ease-in-out;
-                transition: transform 0.3s ease-in-out;
-            }
-
-            &.active,
-            &.active:focus,
-            &:focus{
-              outline: 0;
-            }
-
-            &.active .icon,
-            &.active::before,
-            &.active::after {
-              background: $brand-color;
-            }
-
-            //Style Cancel
-            &.hamburger-cancel.active:before {
-              transform: translateY(.4em) rotate(135deg);
-            }
-
-            &.hamburger-cancel.active:after{
-              transform: translateY(-.4em) rotate(-135deg);
-            }
-
-            &.hamburger-cancel.active .icon {
-              transform: scale(0);
-            }
-        }
-
-        .icon {
-          height: 1em;
-          width: 1em;
-          display: inline-block;
-          vertical-align: middle;
-          fill: currentColor;
-        }
-    }
+    // .main-wrapper {
+    //     width: 64%;
+    // }
 
     // @include respond-to(medium) {
     //     position: absolute;
@@ -115,6 +29,7 @@
 .main-list-nav {
     width: 64%;
     //height: 60px;
+    margin: 0 auto;
     padding: 20px 0;
     text-align: center;
 
@@ -123,7 +38,7 @@
     @include align-items(center);
     //@include flex-flow(row wrap);
 
-    li {
+    li.nav-level1 {
         @include flex(1 0 auto);
         padding: 0 2.5%;
 
@@ -139,10 +54,16 @@
             }
         }
 
-        a {
+        // @include on-event {
+        //     .sub-list-nav {
+        //         display: block;
+        //     }
+        // }
+
+        & > a {
             position: relative;
             display: inline-block;
-            //padding-bottom: 20px;
+
             text-align: center;
             font-size: 16px;
             font-family: $corporate-sbold;
@@ -159,65 +80,58 @@
     .fa-home {
         font-size: 18px;
     }
-
-    .burger-menu {
-        display: none;
-    }
-
-    // @include respond-to(medium) {
-    //     width: 100%;
-    //     display: block;
-
-    //     padding: 15px 0;
-    //     background-color: $white;
-    // }
 }
-
 
 //================================================
 //Sub navigation (Level 2)
 //================================================
 .sub-list-nav {
     display: none;
+
     width: 100%;
     position: absolute;
     top: 60px;
     left: 0;
-    z-index: 600;
+    z-index: 700;
+
     background-color: $brand-color;
 
-    .main-wrapper {
+    & .row {
         @include flexbox;
         @include flex-flow(row wrap);
         @include justify-content(space-around);
         @include align-items(flex-start);
     }
 
-    .column {
+    & .column {
         width: 20%;
         padding: 60px 20px;
         text-align: left;
 
         ul {
             padding-bottom: 30px;
+
+            &:nth-of-type(even) {
+                padding-top: 30px;
+                border-top: 1px solid $grey7;
+            }
         }
 
-        ul:nth-of-type(even) {
-            padding-top: 30px;
-            border-top: 1px solid $grey7;
+        li.nav-level2 {
+            border-right: none;
+
+            & > a {
+                line-height: 1.5;
+                color: $grey2;
+                font-size: 16px;
+                font-family: $corporate-smedium;
+            }
+
+            & .category {
+                color: $white;
+                font-size: 16px;
+                font-family: $corporate-sbold;
+            }
         }
-    }
-
-    a {
-        line-height: 1.5;
-        color: $grey2;
-        font-size: 16px;
-        font-family: $corporate-smedium;
-    }
-
-    .category {
-        color: $white;
-        font-size: 16px;
-        font-family: $corporate-sbold;
     }
 }

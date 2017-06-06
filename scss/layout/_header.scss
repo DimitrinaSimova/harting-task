@@ -216,7 +216,7 @@ header {
     }
 
     @include respond-to(extra-large) {
-        @include flex-basis(35%);
+        @include flex-basis(36%);
         margin-left: 0;
     }
 
@@ -239,6 +239,10 @@ header {
 
     @include respond-to(extra-large) {
         @include flex-basis(34%);
+    }
+
+    @include respond-to(large) {
+        @include flex-basis(50%);
     }
 }
 

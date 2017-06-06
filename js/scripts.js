@@ -7,16 +7,15 @@ $(document).ready(function() {
         responsive: true
     });
 
-    $('ul.main-list-nav a').on('click', function(e) {
-       e.preventDefault();
+    $('.main-list-nav .nav-level1 a').on('click', function(e) {
+      //e.preventDefault();
 
-       var navID = $(this).attr('data-link');
-       $('#' + navID).css('display', 'block');
+      $(this).closest("li").find("[class^='sub-list-nav']").slideToggle();
 
-       //console.log(navID);
-       //var  selectorTxt = '.main-wrapper' + '#' + thisData;
-       //var  obj = $( selectorTxt );
-       //obj.css('display', 'block');
-     });
+      if($(e.target).parents('.main-nav-section').length == 0 && !$(e.target).css('display', 'block')) {
+        $('.main-nav-section').css('display', 'none');
+      }
+
+    });
 
 });

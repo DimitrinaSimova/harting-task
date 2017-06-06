@@ -482,66 +482,13 @@ body {
  * 2. Center it in the viewport
  * 3. Leave some space on the edges, especially valuable on small screens
  */
-.main-nav-holder {
+.main-nav-section {
   position: relative;
-  z-index: 100; }
-  .main-nav-holder .main-wrapper {
-    width: 64%; }
-  .main-nav-holder .burgur-menu {
-    display: none;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 10; }
-    .main-nav-holder .burgur-menu .hamburger {
-      font-size: 20px;
-      display: inline-block;
-      width: 1em;
-      height: 1em;
-      padding: 0;
-      cursor: pointer;
-      vertical-align: middle;
-      border: 0 none;
-      outline: 0;
-      background-color: transparent;
-      -webkit-transition: transform 0.3s ease-in-out;
-      -moz-transition: transform 0.3s ease-in-out;
-      -o-transition: transform 0.3s ease-in-out;
-      transition: transform 0.3s ease-in-out; }
-      .main-nav-holder .burgur-menu .hamburger::before, .main-nav-holder .burgur-menu .hamburger::after {
-        content: ''; }
-      .main-nav-holder .burgur-menu .hamburger::before, .main-nav-holder .burgur-menu .hamburger::after, .main-nav-holder .burgur-menu .hamburger .icon {
-        display: block;
-        width: 100%;
-        height: .2em;
-        margin: 0 0 .2em;
-        border-radius: .05em;
-        background: #2f3033;
-        -webkit-transition: transform 0.3s ease-in-out;
-        -moz-transition: transform 0.3s ease-in-out;
-        -o-transition: transform 0.3s ease-in-out;
-        transition: transform 0.3s ease-in-out; }
-      .main-nav-holder .burgur-menu .hamburger.active, .main-nav-holder .burgur-menu .hamburger.active:focus, .main-nav-holder .burgur-menu .hamburger:focus {
-        outline: 0; }
-      .main-nav-holder .burgur-menu .hamburger.active .icon, .main-nav-holder .burgur-menu .hamburger.active::before, .main-nav-holder .burgur-menu .hamburger.active::after {
-        background: #2f3033; }
-      .main-nav-holder .burgur-menu .hamburger.hamburger-cancel.active:before {
-        transform: translateY(0.4em) rotate(135deg); }
-      .main-nav-holder .burgur-menu .hamburger.hamburger-cancel.active:after {
-        transform: translateY(-0.4em) rotate(-135deg); }
-      .main-nav-holder .burgur-menu .hamburger.hamburger-cancel.active .icon {
-        transform: scale(0); }
-    .main-nav-holder .burgur-menu .icon {
-      height: 1em;
-      width: 1em;
-      display: inline-block;
-      vertical-align: middle;
-      fill: currentColor; }
+  z-index: 400; }
 
 .main-list-nav {
   width: 64%;
+  margin: 0 auto;
   padding: 20px 0;
   text-align: center;
   display: -webkit-box;
@@ -559,7 +506,7 @@ body {
   -webkit-align-items: center;
   -moz-align-items: center;
   align-items: center; }
-  .main-list-nav li {
+  .main-list-nav li.nav-level1 {
     -webkit-box-flex: 1;
     -webkit-flex: 1 0 auto;
     -moz-box-flex: 1;
@@ -568,12 +515,12 @@ body {
     flex: 1 0 auto;
     padding: 0 2.5%;
     border-right: 1px solid #e5e5e5; }
-    .main-list-nav li:last-of-type {
+    .main-list-nav li.nav-level1:last-of-type {
       border-right: none; }
     @media screen and (max-width: 768px) {
-      .main-list-nav li:first-of-type {
+      .main-list-nav li.nav-level1:first-of-type {
         display: none; } }
-    .main-list-nav li a {
+    .main-list-nav li.nav-level1 > a {
       position: relative;
       display: inline-block;
       text-align: center;
@@ -581,12 +528,10 @@ body {
       font-family: "corporate-sbold";
       white-space: nowrap; }
       @media screen and (max-width: 1024px) {
-        .main-list-nav li a {
+        .main-list-nav li.nav-level1 > a {
           font-size: 14px; } }
   .main-list-nav .fa-home {
     font-size: 18px; }
-  .main-list-nav .burger-menu {
-    display: none; }
 
 .sub-list-nav {
   display: none;
@@ -594,9 +539,9 @@ body {
   position: absolute;
   top: 60px;
   left: 0;
-  z-index: 600;
+  z-index: 700;
   background-color: #2f3033; }
-  .sub-list-nav .main-wrapper {
+  .sub-list-nav .row {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
@@ -621,18 +566,20 @@ body {
     text-align: left; }
     .sub-list-nav .column ul {
       padding-bottom: 30px; }
-    .sub-list-nav .column ul:nth-of-type(even) {
-      padding-top: 30px;
-      border-top: 1px solid #59595c; }
-  .sub-list-nav a {
-    line-height: 1.5;
-    color: #a6a6a6;
-    font-size: 16px;
-    font-family: "corporate-smedium"; }
-  .sub-list-nav .category {
-    color: #FFF;
-    font-size: 16px;
-    font-family: "corporate-sbold"; }
+      .sub-list-nav .column ul:nth-of-type(even) {
+        padding-top: 30px;
+        border-top: 1px solid #59595c; }
+    .sub-list-nav .column li.nav-level2 {
+      border-right: none; }
+      .sub-list-nav .column li.nav-level2 > a {
+        line-height: 1.5;
+        color: #a6a6a6;
+        font-size: 16px;
+        font-family: "corporate-smedium"; }
+      .sub-list-nav .column li.nav-level2 .category {
+        color: #FFF;
+        font-size: 16px;
+        font-family: "corporate-sbold"; }
 
 header {
   position: relative; }
@@ -642,7 +589,7 @@ header {
   max-width: 1510px;
   margin: 0 auto; }
 
-.link-hover-effect:before, .main-list-nav li a:before, .meta-section .career-btn:before {
+.link-hover-effect:before, .main-list-nav li.nav-level1 > a:before, .meta-section .career-btn:before {
   content: '';
   display: block;
   width: 0;
@@ -654,7 +601,7 @@ header {
   -moz-transition: width 0s ease, background .5s ease;
   -o-transition: width 0s ease, background .5s ease;
   transition: width 0s ease, background .5s ease; }
-.link-hover-effect:after, .main-list-nav li a:after, .meta-section .career-btn:after {
+.link-hover-effect:after, .main-list-nav li.nav-level1 > a:after, .meta-section .career-btn:after {
   content: '';
   display: block;
   width: 0;
@@ -668,7 +615,7 @@ header {
   -moz-transition: width .5s ease;
   -o-transition: width .5s ease;
   transition: width .5s ease; }
-.link-hover-effect:hover:before, .main-list-nav li a:hover:before, .meta-section .career-btn:hover:before {
+.link-hover-effect:hover:before, .main-list-nav li.nav-level1 > a:hover:before, .meta-section .career-btn:hover:before {
   width: 100%;
   background: #fdc716;
   transition: width .5s ease;
@@ -676,7 +623,7 @@ header {
   -moz-transition: width .5s ease;
   -o-transition: width .5s ease;
   transition: width .5s ease; }
-.link-hover-effect:hover:after, .main-list-nav li a:hover:after, .meta-section .career-btn:hover:after {
+.link-hover-effect:hover:after, .main-list-nav li.nav-level1 > a:hover:after, .meta-section .career-btn:hover:after {
   width: 100%;
   background: transparent;
   transition: all 0s ease;
@@ -812,10 +759,10 @@ header {
     font-size: 20px; }
   @media screen and (max-width: 1280px) {
     .search-form-container {
-      -webkit-flex-basis: 35%;
-      -moz-flex-basis: 35%;
-      -ms-flex-preferred-size: 35%;
-      flex-basis: 35%;
+      -webkit-flex-basis: 36%;
+      -moz-flex-basis: 36%;
+      -ms-flex-preferred-size: 36%;
+      flex-basis: 36%;
       margin-left: 0; } }
   @media screen and (max-width: 1024px) {
     .search-form-container {
@@ -848,6 +795,12 @@ header {
       -moz-flex-basis: 34%;
       -ms-flex-preferred-size: 34%;
       flex-basis: 34%; } }
+  @media screen and (max-width: 1024px) {
+    .account-section {
+      -webkit-flex-basis: 50%;
+      -moz-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+      flex-basis: 50%; } }
 
 .account-wrap {
   display: -webkit-box;
